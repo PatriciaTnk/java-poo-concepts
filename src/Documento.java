@@ -1,6 +1,6 @@
 public abstract class Documento {
-    private String titulo;
-    private int anoPublicacao;
+    protected String titulo;
+    protected int anoPublicacao;
 
     public String getTitulo() {
         return titulo;
@@ -15,5 +15,5 @@ public abstract class Documento {
         this.anoPublicacao = anoPublicacao;
     }
 
-
+    public abstract void informacoes();
 }

@@ -1,7 +1,7 @@
 public class Livro extends Documento{
-   
     private String autor;
     private String isbn;
+
     public String getAutor() {
         return autor;
     }
@@ -15,6 +15,7 @@ public class Livro extends Documento{
         this.isbn = isbn;
     }
 
-    
-
+    public void informacoes(){
+        System.out.println("Titulo: " + super.titulo + "\nAno de publicação: " + super.anoPublicacao + "\nAutor: " + this.autor + "\nISBN: " + this.isbn);
+    }
 }

@@ -15,5 +15,7 @@ public class Revista extends Documento{
         this.numeroEdicao = numeroEdicao;
     }
 
-    
+    public void informacoes(){
+        System.out.println("Titulo: " + super.titulo + "\nAno de publicação: " + super.anoPublicacao + "\nEditora: " + this.editora + "\nNº edição: " + this.numeroEdicao);
+    }
 }

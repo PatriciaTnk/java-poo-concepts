@@ -11,7 +11,7 @@ public class Leitor extends Pessoa {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void updtTelefone(String telefone) {
         this.telefone = telefone;
     }
 

@@ -6,7 +6,12 @@ public abstract class Documento {
         return titulo;
     }
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        if (titulo.isEmpty()){
+            System.out.println("Título inválido");
+            return;
+        }else {
+            this.titulo = titulo;
+        }
     }
     public int getAnoPublicacao() {
         return anoPublicacao;

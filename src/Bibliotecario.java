@@ -7,8 +7,14 @@ public class Bibliotecario extends Pessoa{
         return salario;
     }
 
+    //Aplicação de regras de negócio para
     public void setSalario(double salario) {
-        this.salario = salario;
+        if(salario < 0){
+            System.out.println("Salário inválido");
+            return;
+        } else {
+            this.salario = salario;
+        }
     }
 
     public String getLogin() {
@@ -27,6 +33,7 @@ public class Bibliotecario extends Pessoa{
         this.senha = senha;
     }
 
+    //Conceito de herança - Implementação do método informacoes() da classe Pessoa
     public void informacoes(){
         System.out.println("Nome: " + super.nome + "\nCPF: " + super.cpf + "\nE-mail: " + super.email + "\nSalário: R$" + this.salario);
     }

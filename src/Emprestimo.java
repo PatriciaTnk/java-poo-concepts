@@ -61,11 +61,29 @@ public class Emprestimo {
         return totalEmprestimos;
     }
 
-    public int qtdDiarias(){
-        return dataDevolucao.getDayOfMonth()-dataEmprestimo.getDayOfMonth();
+    public String atraso(){
+
+        if(LocalDate.now().isAfter(dataDevolucao)){
+            return "Atrasado";
+        }
+        return "OK";
     }
 
-    public int qtdDiarias(LocalDate dataDevolucaoAposRenovacao){
-        return dataDevolucaoAposRenovacao.getDayOfMonth()-LocalDate.now().getDayOfMonth();
+    public String atraso(LocalDate diaVerificar){
+        if(diaVerificar.isAfter(dataDevolucao)){
+            return "Atrasado";
+        }
+        return "OK";
     }
+
+    @Override
+    public String toString() {
+        return "Emprestimo [leitor=" + leitor.getNome()
+        + ", documento=" + documento.getTitulo()
+        + ", bibliotecario=" + bibliotecario.getNome()
+        + ", dataEmprestimo=" + dataEmprestimo.toString()
+        + ", dataDevolucao=" + dataDevolucao.toString() + "]";
+    }
+
+    
 }
